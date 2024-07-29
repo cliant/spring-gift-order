@@ -17,7 +17,7 @@ Request
 GET /api/products/1/options HTTP/1.1
 ```
 Response
-```JSON
+```
   HTTP/1.1 200 
   Content-Type: application/json
   
