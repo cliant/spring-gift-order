@@ -13,12 +13,12 @@
 1. 상품 옵션 조회
 
 Request
-```
+```JSON
 GET /api/products/1/options HTTP/1.1
 ```
 
 Response
-```
+```JSON
   HTTP/1.1 200 
   Content-Type: application/json
   
@@ -31,10 +31,11 @@ Response
   ]
 ```
 
+
 2. 상품 옵션 추가
 
 Request
-```
+```JSON
 POST /api/products/1/options HTTP/1.1
 Content-Type: application/json
 
@@ -45,7 +46,7 @@ Content-Type: application/json
 ```
 
 Response
-```
+```JSON
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -56,10 +57,11 @@ Content-Type: application/json
 }
 ```
 
+
 3. 상품 옵션 수정
 
 Request
-```
+```JSON
 PUT /api/products/1/options/1 HTTP/1.1
 Content-Type: application/json
 
@@ -70,7 +72,7 @@ Content-Type: application/json
 ```
 
 Response
-```
+```JSON
 HTTP/1.1 200
 Content-Type: application/json
 
@@ -81,15 +83,16 @@ Content-Type: application/json
 }
 ```
 
+
 4. 상품 옵션 삭제
 
 Request
-```
+```JSON
 DELETE /api/products/1/options/1 HTTP/1.1
 ```
 
 Response
-```
+```JSON
 HTTP/1.1 204 NO CONTENT
 ```
    
