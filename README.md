@@ -1,7 +1,7 @@
 # spring-gift-order
 
  
- # 상품 옵션 API
+ ## 상품 옵션 API
 |URL|메서드|기능|설명|
 |---------|----|-------|--------|
 |/api/products/{productId}/options|GET|상품 옵션 목록 조회|특정 상품에 대한 모든 옵션을 조회한다.|
@@ -10,12 +10,13 @@
 |/api/products/{productId}/options/{optionId}|DELETE|상품 옵션 삭제|기존 제품 옵션을 삭제한다.|
 
 
-# 상품 옵션 조회
+1. 상품 옵션 조회
 
 Request
 ```
 GET /api/products/1/options HTTP/1.1
 ```
+
 Response
 ```
   HTTP/1.1 200 
@@ -29,6 +30,69 @@ Response
     }
   ]
 ```
+
+2. 상품 옵션 추가
+
+Request
+```
+POST /api/products/1/options HTTP/1.1
+Content-Type: application/json
+
+{
+      "name": "01. [Best] 시어버터 핸드 & 시어 스틱 립 밤",
+      "quantity": 969
+}
+```
+
+Response
+```
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+      "id": 464946561,
+      "name": "01. [Best] 시어버터 핸드 & 시어 스틱 립 밤",
+      "quantity": 969
+}
+```
+
+3. 상품 옵션 수정
+
+Request
+```
+PUT /api/products/1/options/1 HTTP/1.1
+Content-Type: application/json
+
+{
+      "name": "02. [Best] 체리 블라썸 핸드 & 체리 블라썸 립 밤",
+      "quantity": 953
+}
+```
+
+Response
+```
+HTTP/1.1 200
+Content-Type: application/json
+
+{
+      "id": 464946231,
+      "name": "02. [Best] 체리 블라썸 핸드 & 체리 블라썸 립 밤",
+      "quantity": 953
+}
+```
+
+4. 상품 옵션 삭제
+
+Request
+```
+DELETE /api/products/1/options/1 HTTP/1.1
+```
+
+Response
+```
+HTTP/1.1 204 NO CONTENT
+```
+   
 
 # 주문 API
 |URL|메서드|기능|설명|
