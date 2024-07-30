@@ -69,8 +69,8 @@ Content-Type: application/json
 #### Fail 
 |Code|설명|
 |----|--------|
-|404 NOT FOUND|존재하지 않는 카테고리|
-|409 CONFLICT|이미 존재하는 상품|
+|404 NOT FOUND|존재하지 않는 상품|
+|409 CONFLICT|이미 존재하는 옵션|
 
 
 
